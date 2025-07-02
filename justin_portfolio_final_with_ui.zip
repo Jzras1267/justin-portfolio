@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Socrates Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 1000 });
+      document.getElementById('toggle-dark').addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
+    });
+  </script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f0f4f8, #e3f2fd);
+    }
+    .bar-container {
+      background-color: #e0e0e0;
+      border-radius: 25px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .bar {
+      height: 100%;
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      line-height: 20px;
+    }
+  </style>
+</head>
+<body class="text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+  <header class="bg-white dark:bg-gray-800 p-4 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Justin Socrates</h1>
+      <div class="space-x-4">
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#education" class="hover:text-blue-500">Education</a>
+        <a href="#skills" class="hover:text-blue-500">Skills</a>
+        <a href="#portfolio" class="hover:text-blue-500">Portfolio</a>
+        <a href="#blog" class="hover:text-blue-500">Blog</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+        <button id="toggle-dark" class="ml-2 bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded text-sm">Toggle Dark</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="py-16 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg">Hi! I'm <strong>Justin Socrates</strong>, a Computer Science student at President University. I’m passionate about creating user-friendly web experiences and smart systems in the field of IoT. I'm committed to building innovative solutions that blend both software and hardware for a smarter, safer world.</p>
+      </div>
+    </section>
+
+    <section id="education" class="py-16 px-6 bg-blue-50 dark:bg-gray-800" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Education</h2>
+        <ul class="space-y-4">
+          <li><strong>2022–2025:</strong> President University – Bachelor of Computer Science</li>
+          <li><strong>2019–2022:</strong> SMKN 1 Purwokerto – Software Engineering</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="py-16 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Skills</h2>
+        <div class="space-y-4">
+          <div>
+            <span>HTML/CSS</span>
+            <div class="bar-container"><div class="bar bg-blue-600" style="width: 95%">95%</div></div>
+          </div>
+          <div>
+            <span>JavaScript</span>
+            <div class="bar-container"><div class="bar bg-yellow-500" style="width: 80%">80%</div></div>
+          </div>
+          <div>
+            <span>Vue.js</span>
+            <div class="bar-container"><div class="bar bg-green-500" style="width: 60%">60%</div></div>
+          </div>
+          <div>
+            <span>Tailwind CSS</span>
+            <div class="bar-container"><div class="bar bg-indigo-500" style="width: 85%">85%</div></div>
+          </div>
+          <div>
+            <span>Communication</span>
+            <div class="bar-container"><div class="bar bg-pink-500" style="width: 90%">90%</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="py-16 px-6 bg-blue-50 dark:bg-gray-800" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Portfolio</h2>
+        <ul class="space-y-6">
+          <li class="bg-white dark:bg-gray-700 p-4 rounded shadow border-2 border-blue-500">
+            <h3 class="font-bold">Best Project: ProTech Helmet</h3>
+            <p>An IoT-enabled smart helmet for construction worker safety. Features gas and fall detection with ESP32 and Firebase integration.</p>
+          </li>
+          <li class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+            <h3 class="font-bold">Sakura Park Hotel Website</h3>
+            <p>Responsive, static website created for a hospitality business, showcasing rooms, amenities, and a contact system.</p>
+          </li>
+          <li class="bg-white dark:bg-gray-700 p-4 rounded shadow">
+            <h3 class="font-bold">SCReMS – Car Rental System</h3>
+            <p>A smart vehicle rental management system designed for dynamic booking, fleet handling, and return automation.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blog" class="py-16 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <h2 class="text-3xl font-bold mb-6">Blog Articles</h2>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">My Learning Journey in Web Development</h3>
+          <p>From basic HTML to full-stack development with Vue.js, Tailwind, and Firebase, this blog walks you through the milestones and setbacks of becoming a modern web developer.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">Tutorial: Contact Form with Formspree</h3>
+          <p>A step-by-step guide to creating a responsive and functional contact form without server setup using Formspree, ideal for portfolios and static sites.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">
+          <h3 class="text-xl font-semibold">ProTech Helmet – Smart Safety System</h3>
+          <p>In-depth development journey of ProTech Helmet, combining hardware design, ESP32 programming, and real-time alert systems via Firebase for safety applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 bg-blue-50 dark:bg-gray-800" data-aos="fade-up">
+      <div class="max-w-xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+        <form action="https://formspree.io/f/mayvlbpb" method="POST" class="space-y-4 bg-white dark:bg-gray-700 p-6 rounded shadow">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded" />
+          <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded" />
+          <textarea name="message" rows="4" placeholder="Message" required class="w-full p-3 border rounded"></textarea>
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-6 text-center bg-white dark:bg-gray-900">
+    <p>© 2025 Justin Socrates. All rights reserved.</p>
+  </footer>
+</body>
+</html>
